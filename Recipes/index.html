@@ -9,10 +9,11 @@
 <div id="shadowBox">
     <h3 class="rainbow rainbow_text_animated">RECIPES</h3>
 </div>
-<br>
-<input type="text" id="myInput0" style="width:30%;margin-top: 60px;" onkeyup="myFunction(0)" placeholder="Search by Recipe..">
-<input type="text" id="myInput1" style="width:30%;margin-top: 60px;" onkeyup="myFunction(1)" placeholder="Search by Ingredient..">
-<input type="text" id="myInput2" style="width:30%;margin-top: 60px;" onkeyup="myFunction(2)" placeholder="Search by Allergen..">
+<div style="margin-top: 60px;display: flex; flex-direction: row;">
+<input type="text" id="myInput0" onkeyup="myFunction(0)" placeholder="Search by Recipe..">
+<input type="text" id="myInput1" onkeyup="myFunction(1)" placeholder="Search by Ingredient..">
+<input type="text" id="myInput2" onkeyup="myFunction(2)" placeholder="Search by Allergen..">
+</div>
 <table id="myTable">
   <tr class="header">
     <th style="width:40%;">Recipe</th>
@@ -21,7 +22,7 @@
   </tr>
   <tr>
     <td>Lasagne Cup</td>
-    <td>Wonton Wrapper</td>
+    <td>Gyoza Wrapper</td>
     <td>Gluten</td>
   </tr>
   <tr>
