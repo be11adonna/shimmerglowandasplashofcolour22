@@ -13,7 +13,7 @@ httpRequest.onreadystatechange = () => {
 httpRequest.open ('GET', 'https://be11adonna.github.io/shimmerglowandasplashofcolour22/Recipes-sparkle-22.csv', true);
 httpRequest.send();
 
-function myFunction(column) {
+export function myFunction(column) {
     // Declare variables
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("myInput"+column);
