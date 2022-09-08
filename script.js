@@ -1,4 +1,4 @@
-import {parse} from 'Recipes/node-csv/index.js';
+import {parse} from './Recipes/node-csv/index.js';
 parse(records, options, (err, data) => {
   console.info(data)
 });
