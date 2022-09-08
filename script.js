@@ -1,3 +1,7 @@
+import {parse} from 'Recipes/node-csv/index.js';
+parse(records, options, (err, data) => {
+  console.info(data)
+});
 function myFunction(column) {
     // Declare variables
     var input, filter, table, tr, td, i, txtValue;
