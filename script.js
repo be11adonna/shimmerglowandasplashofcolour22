@@ -1,14 +1,17 @@
 import {parse} from './Recipes/node-csv/index.js';
 const httpRequest = new XMLHttpRequest();
 httpRequest.onreadystatechange = () => {
-  if (httpRequest.ReadyState === XMLHttpRequest.DONE) {
+  if (httpRequest.readyState === XMLHttpRequest.DONE) {
     if (httpRequest.status === 200) {
-      console.info(httpRequest.responseText);
+      parse(httpRequest.responseText, {columns:true}, (err, data) => {
+        console.info(data)
+        if (err) {
+          console.error (err);
+        }
+      });
     }
   }
-  // parse(records, options, (err, data) => {
-  //   console.info(data)
-  // });
+
 }
 httpRequest.open ('GET', 'https://be11adonna.github.io/shimmerglowandasplashofcolour22/Recipes-sparkle-22.csv', true);
 httpRequest.send();
