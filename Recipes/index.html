@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
     <head> 
-        <link href="../style.css" rel="stylesheet">
+        <link href="./style.css" rel="stylesheet">
         <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
-        <script src="../script.js" type="module"></script>
         <script type="module">
-          import {myFunction} from '../script.js'
+          import {myFunction} from './script.js'
         
           document.querySelector('#myInput0').addEventListener('keyup', () => { myFunction(0) });
           document.querySelector('#myInput1').addEventListener('keyup', () => { myFunction(1) });
           document.querySelector('#myInput2').addEventListener('keyup', () => { myFunction(2) });
+          
+          var data = [console.info(data)];
+          var myTable = document.createElement("PartyRecipes"),
+          row = myTable.insertRow(), cell;
+          var perrow = 3; // 3 CELLS PER ROW
+          data.forEach((value, i) => {
+        // ADD CELL
+          cell = row.insertCell();
+          cell.innerHTML = value;
+          var next = i + 1;
+          if (next%perrow==0 && next!=data.length) { row = myTable.insertRow(); }
+          });
+          document.getElementById("PartyRecipes").appendChild(myTable);
         </script>
     </head>
     <body>
 <div id="shadowBox">
     <h3 class="rainbow rainbow_text_animated">RECIPES</h3>
 </div>
-<div style="margin-top: 60px;display: flex; flex-direction: row;">
+<div id="searchbox" style="margin-top: 60px;display: flex; flex-direction: row;">
 <input type="text" id="myInput0" style="width:40%;" placeholder="Search by Recipe..">
 <input type="text" id="myInput1" style="width:30%;" placeholder="Search by Ingredient..">
-<input type="text" id="myInput2" style="width:30%;" placeholder="Search by Allergen..">
+<input type="text" id="myInput2" style="width:30%;"placeholder="Search by Allergen..">
 </div>
+<div id="table"> </div>
 <table id="myTable">
   <tr class="header">
     <th style="width:40%;">Recipe</th>
@@ -92,6 +105,6 @@
     <td>Milk</td>
     <td>Dairy</td>
   </tr>
-</table> 
+</table>
 </body>
 </html>

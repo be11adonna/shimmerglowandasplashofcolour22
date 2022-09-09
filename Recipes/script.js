@@ -1,4 +1,4 @@
-import {parse} from './Recipes/node-csv/index.js';
+import {parse} from './node-csv/index.js';
 const httpRequest = new XMLHttpRequest();
 httpRequest.onreadystatechange = () => {
   if (httpRequest.readyState === XMLHttpRequest.DONE) {
@@ -13,7 +13,7 @@ httpRequest.onreadystatechange = () => {
   }
 
 }
-httpRequest.open ('GET', 'https://be11adonna.github.io/shimmerglowandasplashofcolour22/Recipes-sparkle-22.csv', true);
+httpRequest.open ('GET', 'https://be11adonna.github.io/shimmerglowandasplashofcolour22/Recipes/Recipes-sparkle-22.csv', true);
 httpRequest.send();
 
 export function myFunction(column) {
